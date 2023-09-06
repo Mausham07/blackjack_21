@@ -6,8 +6,22 @@ card_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 u_card = []
 c_card = []
 
-user_start = input("\nType 'start to start the game: ").lower()
+user_start = input("\nType 'start to start the BLACKJACK 23 game: ").lower()
 if user_start == 'start':
+
+    print(''' 
+
+    ** BLACK JACK 23 **
+     _______    _______
+    |       |  |       |
+    | A     |  | K     |
+    |   ♠   |  |   ♥   |
+    |     A |  |     K |
+    |_______|  |_______|
+
+    ** BLACK JACK 23 **
+
+''')
 
     def user_card (card_list):
         for _ in range(2):
@@ -49,7 +63,7 @@ if user_start == 'start':
         u_total = user_total(u_card)
         c_total = computer_total(c_card)
 
-        if u_total > 21 or c_total > 21:
+        if u_total > 23 or c_total > 23:
             break
 
         print(f"\nYour cards: {u_card}. Your current score: {u_total}")
@@ -58,20 +72,20 @@ if user_start == 'start':
         another_card = input("\nType 'y' to get another card, type 'n' to pass: ")
            
 
-    diff1 = abs(21 - u_total)
-    diff2 = abs(21 - c_total)
+    diff1 = abs(23 - u_total)
+    diff2 = abs(23 - c_total)
     
     print(f"\n\nYour final hand: {u_card}. Your final score: {u_total}")
     print(f"Computer's final hand: {c_card}. Computer's final score: {c_total}")
 
-    if c_total > 21 and u_total > 21:
+    if c_total > 23 and u_total > 23:
         print("\nBoth went over. Tie")
 
-    elif u_total > 21 :
-        print("\nYou went over 21. You loose.")
+    elif u_total > 23 :
+        print("\nYou went over 23. You loose.")
 
-    elif c_total > 21:
-        print("\nComputer went over 21. You win.")
+    elif c_total > 23:
+        print("\nComputer went over 23. You win.")
 
     elif diff1 < diff2:
         print("\nYou won 😁")
@@ -80,6 +94,4 @@ if user_start == 'start':
         print("\nYou loose 😞")
 
 
-
-
-   
+ 
