@@ -6,7 +6,7 @@ card_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 u_card = []
 c_card = []
 
-user_start = input("\nType 'start to start the BLACKJACK 23 game: ").lower()
+user_start = input("\nType 'start' to start the BLACKJACK 23 game: ").lower()
 if user_start == 'start':
 
     print(''' 
